@@ -17,7 +17,6 @@ export default [
     rules: {
       ...eslintConfigPrettier.rules, // Правила конфигурации Prettier
       'prettier/prettier': 'error', // Включить проверку Prettier как ESLint правила
-      // Ваши другие правила ESLint
     },
   },
 ];
