@@ -3,7 +3,7 @@ const display = document.getElementById('display');
 const buttons = document.getElementById('buttons');
 
 const unusedVar = 42;
-let currentValue = '0';
+let currentValue = '0'
 let previousValue = null;
 let operator = null;
 

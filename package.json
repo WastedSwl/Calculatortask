@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --open",
-    "lint": "eslint ./src",
+    "lint": "eslint ./src/**/*.js",
     "format": "prettier --write \"src/**/*.js\"",
     "prepare": "husky install"
   },
@@ -30,10 +30,15 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
-    "lint-staged": {
-      "src/*.js": [
-        "eslint --fix",
-        "prettier --write"
-      ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
