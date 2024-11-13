@@ -2,10 +2,10 @@
 const display = document.getElementById('display');
 const buttons = document.getElementById('buttons');
 
-const unusedVar = 42;
+const unusedVar = 42
 let currentValue = '0'
-let previousValue = null;
-let operator = null;
+let previousValue = null
+let operator = null
 
 buttons.addEventListener('click', (event) => {
   const target = event.target;

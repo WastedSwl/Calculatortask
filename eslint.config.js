@@ -15,8 +15,8 @@ export default [
       prettier: eslintPluginPrettier,
     },
     rules: {
-      ...eslintConfigPrettier.rules, // Правила конфигурации Prettier
-      'prettier/prettier': 'error', // Включить проверку Prettier как ESLint правила
+      'no-unused-vars': 'error', // Ошибка при неиспользуемых переменных
+      'semi': ['error', 'always'], // Обязательная точка с запятой
     },
   },
 ];
