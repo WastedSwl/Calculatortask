@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #d3d3d3;
+  transition: background-color 0.3s ease;
+}
+
+#calculator {
+  width: 420px;
+  background-color: #505050;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+#display {
+  height: 100px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 3em;
+  text-align: right;
+  padding: 20px;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  font-size: 1.8em;
+  padding: 25px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.btn.operator {
+  background-color: #f39c12;
+  color: #ffffff;
+}
+
+.btn.operator:hover {
+  background-color: #e08e0b;
+}
+
+.btn.clear {
+  background-color: #a5a5a5;
+  color: #000000;
+}
+
+.btn.clear:hover {
+  background-color: #8e8e8e;
+}
+
+.btn.number, .btn.decimal {
+  background-color: #505050;
+  color: #ffffff;
+}
+
+.btn.number:hover, .btn.decimal:hover {
+  background-color: #737373;
+}
+
+.btn.zero {
+  grid-column: span 2;
+}
+
+#theme-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#theme-button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#theme-button:hover {
+  background-color: #e08e0b;
+}
+
+#theme-menu {
+  margin-top: 10px;
+  background-color: #505050;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+#theme-menu button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+#theme-menu button:hover {
+  background-color: #737373;
+}
+
+#theme-menu.hidden {
+  display: none;
+}
+
+#theme-menu.visible {
+  display: flex;
+}

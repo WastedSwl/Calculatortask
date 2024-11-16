@@ -1,9 +1,8 @@
 import eslintPluginPrettier from 'eslint-plugin-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
   {
-    ignores: ['node_modules/**'], // Игнорировать node_modules
+    ignores: ['node_modules/**'], 
   },
   {
     files: ['src/**/*.js'],
@@ -15,8 +14,8 @@ export default [
       prettier: eslintPluginPrettier,
     },
     rules: {
-      'no-unused-vars': 'error', // Ошибка при неиспользуемых переменных
-      'semi': ['error', 'always'], // Обязательная точка с запятой
+      'no-unused-vars': 'error', 
+      'semi': ['error', 'always'],
     },
   },
 ];

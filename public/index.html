@@ -4,79 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #d3d3d3;
-    }
-
-    #calculator {
-      width: 260px;
-      background-color: #505050;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    #display {
-      height: 80px;
-      background-color: #333333;
-      color: #ffffff;
-      font-size: 2.5em;
-      text-align: right;
-      padding: 20px;
-    }
-
-    #buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .btn {
-      font-size: 1.5em;
-      padding: 20px;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      transition: background-color 0.3s;
-    }
-
-    .btn.operator {
-      background-color: #f39c12;
-      color: #ffffff;
-    }
-
-    .btn.operator:hover {
-      background-color: #e08e0b;
-    }
-
-    .btn.clear {
-      background-color: #a5a5a5;
-      color: #000000;
-    }
-
-    .btn.clear:hover {
-      background-color: #8e8e8e;
-    }
-
-    .btn.number, .btn.decimal {
-      background-color: #505050;
-      color: #ffffff;
-    }
-
-    .btn.number:hover, .btn.decimal:hover {
-      background-color: #737373;
-    }
-
-    .btn.zero {
-      grid-column: span 2;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div id="calculator">
@@ -103,6 +31,12 @@
       <button class="btn operator" data-value="=">=</button>
     </div>
   </div>
-  <script src="index.js"></script>
+  <div id="theme-container">
+    <button id="theme-button">🎨 Тема</button>
+    <div id="theme-menu" class="hidden">
+      <button class="theme-option" data-theme="random">Рандомная</button>
+    </div>
+  </div>
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
