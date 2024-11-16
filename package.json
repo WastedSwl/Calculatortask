@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A simple calculator app",
+  "homepage": "https://WastedSwl.github.io/Calculatortask",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
